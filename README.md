@@ -27,10 +27,10 @@ The app is built using the following technologies:
 Here are some visual examples of our project in action:
 
 ### Home Without query
-![Home Page](frontend/src/assets/IMG.jpeg")
+![Home Page]("frontend/src/assets/IMG.jpeg")
 
 ### Home with query
-![Post Detail](frontend/src/assets/IMG_.jpeg")
+![Post Detail]("frontend/src/assets/IMG_.jpeg")
 
 ## Getting Started 🚀
 
