@@ -20,7 +20,6 @@ The app is built using the following technologies:
 
 - **SQL Formatting:** Enhance the readability of your SQL queries with a single click.
 - **Intuitive Interface:** A user-friendly interface that makes working with SQL queries easy.
-- **Customizable Settings:** Customize formatting rules to fit your needs.
 
 ## 📸 Screenshots
 
