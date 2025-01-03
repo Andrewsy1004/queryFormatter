@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { ToastContainer } from 'react-toastify';
 import { Typewriter } from 'react-simple-typewriter';
+import toast from "react-hot-toast";
 
-import 'react-toastify/dist/ReactToastify.css';
+
 
 export const SQLFormatter = ({ onSubmit }: { onSubmit: (query: string) => void }) => {
     const [query, setQuery] = useState<string>("")
@@ -13,12 +13,18 @@ export const SQLFormatter = ({ onSubmit }: { onSubmit: (query: string) => void }
 
     const handleSubmit = (event: any) => {
         event.preventDefault()
+        
+        if (!query) {
+            toast.error('No SQL query to format!')
+            return
+        }
+
         onSubmit(query)
     }
 
     return (
         <div className="flex flex-col justify-center">
-            <h2 className="text-2xl md:text-1xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-2xl md:text-1xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
                 Improve your workflow in a way&nbsp;
                 <span>
                     <Typewriter
@@ -50,7 +56,6 @@ export const SQLFormatter = ({ onSubmit }: { onSubmit: (query: string) => void }
                     className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent rounded-full">
                     Format
                 </button>
-                <ToastContainer />
 
             </form>
         </div>
